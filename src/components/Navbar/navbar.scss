@@ -1,0 +1,63 @@
+/* Screen Widths: Mobile: 375px. Desktop: 1440px */
+
+/* 
+Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+Weights: 300, 600, 800 
+*/
+
+/* Color vars */
+$color-dark: rgb(43, 56, 68);
+$font-color: rgba(22, 22, 22, 1);
+$border-color: rgba(206, 206, 206, 1);
+
+$bg-color-darkmode: rgba(62, 74, 85, 255);
+$font-color-darkmode: rgb(255, 255, 255);
+
+/* Techover colors */
+$dark-blue: #2b3844;
+$darker-blue: #202c36;
+$white: #f2f2f2;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $dark-blue;
+  color: $white;
+
+  .navbarContainer {
+    width: 76%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      font-weight: 500;
+      font-size: 1.4rem;
+    }
+
+    .logo {
+      width: 38%;
+      height: 38%;
+      object-fit: contain;
+    }
+
+    .darkModeBtnContainer {
+      display: flex;
+      border: 2px solid $white;
+
+      img {
+      }
+      button {
+        background-color: transparent;
+        color: $white;
+      }
+    }
+  }
+}
