@@ -10,7 +10,7 @@ $color-dark: rgb(43, 56, 68);
 $font-color: rgba(22, 22, 22, 1);
 $border-color: rgba(206, 206, 206, 1);
 
-$bg-color-darkmode: rgba(62, 74, 85, 255);
+$bg-color-darkmode: rgba(62, 74, 85);
 $font-color-darkmode: rgb(255, 255, 255);
 
 /* Techover colors */
@@ -27,7 +27,7 @@ $white: #f2f2f2;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $dark-blue;
+  background-color: $bg-color-darkmode;
   color: $white;
 
   .navbarContainer {
@@ -50,14 +50,24 @@ $white: #f2f2f2;
 
     .darkModeBtnContainer {
       display: flex;
-      border: 2px solid $white;
-
-      img {
-      }
+      justify-content: space-between;
+      align-items: center;
+      width: 8.5rem;
+      height: 2.5rem;
+      padding: 0 0.4rem;
+      border-radius: 0.3rem;
+      cursor: pointer;
+      transition: all 0.7s ease;
       button {
         background-color: transparent;
         color: $white;
+        border: none;
+        font-size: medium;
       }
+    }
+
+    .darkModeBtnContainer:hover {
+      background-color: rgb(92, 101, 109);
     }
   }
 }

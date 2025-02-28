@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import "./searchBar.scss";
 
 const SearchBar = () => {
   return (
-    <div>SearchBar</div>
-  )
-}
+  <div className="searchBar">
+    <input type="text" placeholder="Search for a country"/>
+  </div>
+)
+};
 
-export default SearchBar
+export default SearchBar;
