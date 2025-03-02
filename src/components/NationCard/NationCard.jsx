@@ -1,19 +1,28 @@
 import React from "react";
 import "./nationCard.scss";
+import { Link } from "react-router-dom";
 
-const NationCard = () => {
+const NationCard = ({ nation }) => {
+  //console.log(nation.capital);
   return (
-    <div className="nationCard">
-      <div className="imgContainer">
-        <img src="https://flagcdn.com/w320/de.png" alt="German Flag" />
+    <Link to={`/${nation.name.common}`}>
+      <div className="nationCard">
+        <>
+          <div className="imgContainer">
+            <img
+              src={`${nation.flags.png}`}
+              alt={`${nation.name.common} flag`}
+            />
+          </div>
+          <div className="detailsContainer">
+            <p>{nation.name.common}</p>
+            <p>Population: {nation.population.toLocaleString()}</p>
+            <p>Region: {nation.region}</p>
+            <p>Capital: {nation.capital?.[0] || "No capital"}</p>
+          </div>
+        </>
       </div>
-      <div className="detailsContainer">
-        <p>Germany</p>
-        <p>Population: 83240525 </p>
-        <p>Region: Europe</p>
-        <p>Capital: Berlin</p>
-      </div>
-    </div>
+    </Link>
   );
 };
 
