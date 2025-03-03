@@ -3,9 +3,8 @@ import "./nationCard.scss";
 import { Link } from "react-router-dom";
 
 const NationCard = ({ nation }) => {
-  //console.log(nation.capital);
   return (
-    <Link to={`/${nation.name.common}`}>
+    <Link to={`nation/${nation.cca3}`}>
       <div className="nationCard">
         <>
           <div className="imgContainer">

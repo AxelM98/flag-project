@@ -44,7 +44,7 @@ const Nation = () => {
                 {nationDetails[0].capital?.[0] || "No capital"}
               </p>
               <p>
-                <strong>Native name:</strong> Deutchland
+                <strong>Native name:</strong> ?
               </p>
             </div>
             <div className="detailsLeft">
@@ -60,7 +60,7 @@ const Nation = () => {
                   : "No currency available"}
               </p>
               <p>
-                <strong>Language:</strong> German
+                <strong>Language:</strong> ?
               </p>
             </div>
           </div>
@@ -68,9 +68,15 @@ const Nation = () => {
             <h2>Border Countries:</h2>
             <div className="borderCountriesBtnsContainer">
               {nationDetails[0].borders ? (
-                nationDetails[0].borders.map((border) => {
-                  return <button>{border}</button>;
-                })
+                nationDetails[0].borders.map((border) => (
+                  <Link
+                    to={`/nation/${border}`}
+                    key={border}
+                    className="borderBtn"
+                  >
+                    {border}
+                  </Link>
+                ))
               ) : (
                 <p>No border countries</p>
               )}
@@ -83,8 +89,8 @@ const Nation = () => {
 };
 
 export const nationDetailsLoader = async ({ params }) => {
-  const { name } = params;
-  const res = await fetch(`https://restcountries.com/v3.1/name/${name}`);
+  const { code } = params;
+  const res = await fetch(`https://restcountries.com/v3.1/alpha/${code}`);
   return res.json();
 };
 

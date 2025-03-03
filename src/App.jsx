@@ -12,7 +12,11 @@ import RootLayout from "./layouts/RootLayout/RootLayout";
 const routesFromElements = createRoutesFromElements(
   <Route path="/" element={<RootLayout />}>
     <Route index element={<Home />} loader={nationsLoader} />
-    <Route path=":name" element={<Nation />} loader={nationDetailsLoader} />
+    <Route
+      path="/nation/:code"
+      element={<Nation />}
+      loader={nationDetailsLoader}
+    />
   </Route>
 );
 

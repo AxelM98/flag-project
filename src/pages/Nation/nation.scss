@@ -103,7 +103,8 @@ $white: #f2f2f2;
           display: flex;
           gap: 0.5rem;
           overflow-x: scroll;
-          button {
+          .borderBtn {
+            text-decoration: none;
             background-color: rgba(68, 78, 86);
             border: none;
             border-radius: 1rem;

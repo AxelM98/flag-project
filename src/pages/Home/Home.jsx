@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./home.scss";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import SelectRegionBar from "../../components/SelectRegionBar/SelectRegionBar";
@@ -6,16 +6,29 @@ import NationCard from "../../components/NationCard/NationCard";
 import { useLoaderData } from "react-router-dom";
 
 const Home = () => {
+  const [inputText, setInputText] = useState("");
+  const [selectedRegion, setSelectedRegion] = useState("All");
   const nations = useLoaderData();
+
+  const filteredNations = nations.filter(
+    (nation) =>
+      nation.name.common.toLowerCase().includes(inputText.toLowerCase()) &&
+      (selectedRegion === "All" ||
+        nation.region.toLowerCase() === selectedRegion.toLowerCase())
+  );
+
   return (
     <div className="mainConatainer">
       <div className="wrapper">
         <div className="topWrapper">
-          <SearchBar />
-          <SelectRegionBar />
+          <SearchBar setInputText={setInputText} />
+          <SelectRegionBar
+            selectedRegion={selectedRegion}
+            setSelectedRegion={setSelectedRegion}
+          />
         </div>
         <div className="cardsWrapper">
-          {nations.map((nation, i) => (
+          {filteredNations.map((nation, i) => (
             <NationCard key={i} nation={nation} />
           ))}
         </div>
