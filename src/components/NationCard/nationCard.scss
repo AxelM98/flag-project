@@ -1,46 +1,50 @@
-.nationCard {
-  border-radius: 0.3rem;
-  color: white;
-  /* height: 18rem;
+.link {
+  text-decoration: none;
+
+  .nationCard {
+    border-radius: 0.3rem;
+    color: white;
+    /* height: 18rem;
   width: 19rem; */
-  height: 280px;
-  width: 303px;
-  overflow: hidden;
-  cursor: pointer;
-  background-color: rgba(66, 77, 88);
-  transition: all 0.7s ease;
+    height: 280px;
+    width: 303px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: rgba(66, 77, 88);
+    transition: all 0.7s ease;
 
-  .imgContainer {
-    display: flex;
-    height: 50%;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .imgContainer {
+      display: flex;
+      height: 50%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .detailsContainer {
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+
+      :nth-child(1) {
+        color: white;
+        font-weight: bold;
+        font-size: large;
+        margin: 1rem;
+      }
+
+      p {
+        margin: 0.2rem 1rem;
+        font-weight: bold;
+        color: rgb(209, 209, 209);
+      }
     }
   }
 
-  .detailsContainer {
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-
-    :nth-child(1) {
-      color: white;
-      font-weight: bold;
-      font-size: large;
-      margin: 1rem;
-    }
-
-    p {
-      margin: 0.2rem 1rem;
-      font-weight: bold;
-      color: rgb(209, 209, 209);
-    }
+  .nationCard:hover {
+    transform: scale(1.05);
+    background-color: rgb(99, 108, 117);
   }
-}
-
-.nationCard:hover {
-  transform: scale(1.05);
-  background-color: rgb(99, 108, 117);
 }

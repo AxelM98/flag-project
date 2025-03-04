@@ -8,6 +8,10 @@
   cursor: pointer;
   transition: all 0.7s ease;
   position: relative;
+  .dropdownIcon {
+    padding-right: .5rem;
+    color: rgb(211, 211, 211, 0.8);
+  }
 
   p {
     height: 100%;

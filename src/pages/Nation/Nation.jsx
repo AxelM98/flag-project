@@ -14,7 +14,7 @@ const Nation = () => {
     <div className="nation">
       <div className="top">
         <Link to="/" className="backBtn">
-          <ArrowBackIcon style={{ color: "white" }} />
+          <ArrowBackIcon className="backIcon" />
           BACK
         </Link>
       </div>

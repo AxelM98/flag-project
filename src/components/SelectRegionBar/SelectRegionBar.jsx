@@ -11,9 +11,7 @@ const SelectRegionBar = ({ selectedRegion, setSelectedRegion }) => {
     <>
       <div className="selectRegionBar" onClick={() => setDropdown(!dropdown)}>
         <p>{selectedRegion}</p>
-        <ArrowDropDownIcon
-          style={{ paddingRight: ".5rem", color: "rgb(211, 211, 211, 0.8)" }}
-        />
+        <ArrowDropDownIcon className="dropdownIcon" />
         {dropdown && (
           <div className="dropdownMenu">
             {regions.map((region) => (

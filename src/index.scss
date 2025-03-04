@@ -1,0 +1,132 @@
+/* Techover colors */
+$dark-blue: #2b3844;
+$darker-blue: #202c36;
+$white: #f2f2f2;
+
+body {
+  margin: 0;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Light mode */
+.light-mode {
+  background-color: white;
+  color: black;
+
+  /* Home */
+  .mainConatainer {
+    background-color: white;
+  }
+
+  /* Navbar */
+  .navbar {
+    background-color: white;
+    color: black;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+
+    .darkModeBtnContainer button {
+      color: black !important;
+    }
+
+    .darkModeBtnContainer:hover {
+      background-color: rgb(192, 202, 211) !important;
+    }
+  }
+
+  /* Searchbar */
+  .searchBar input {
+    border: 1px solid gray;
+    color: black;
+  }
+  .searchBar input::placeholder {
+    color: gray;
+  }
+  .searchBar input:hover {
+    border: 1px solid black;
+  }
+
+  /* SelectRegionBar */
+  .selectRegionBar {
+    border: 1px solid gray;
+    p {
+      color: gray;
+    }
+    .dropdownIcon {
+      color: gray;
+    }
+
+    .dropdownMenu {
+      background-color: white;
+      color: black;
+      box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.2);
+
+      .menuItem:hover {
+        background-color: rgb(197, 196, 196);
+      }
+    }
+  }
+  .selectRegionBar:hover {
+    border: 1px solid black;
+  }
+
+  /* NationCard */
+  .link {
+    .nationCard {
+      box-shadow: 0px 2px 10px 3px rgba(0, 0, 0, 0.2);
+      background-color: white;
+
+      .detailsContainer {
+        :nth-child(1) {
+          color: black;
+        }
+        p {
+          color: gray;
+        }
+      }
+    }
+    .nationCard:hover {
+      background-color: rgb(231, 231, 231);
+    }
+  }
+
+  /* Nation */
+  .nation {
+    background-color: white;
+    .top {
+      .backBtn {
+        color: black;
+        .backIcon {
+          color: black;
+        }
+      }
+      .backBtn:hover {
+        background-color: rgb(224, 224, 224);
+      }
+    }
+    .bottom {
+      .detailsContainer {
+        color: black;
+
+        .borderCountries {
+          .borderCountriesBtnsContainer {
+            .borderBtn {
+              text-decoration: none;
+              background-color: rgba(0, 0, 0, 0.08);
+              border: none;
+              border-radius: 1rem;
+              color: rgba(0, 0, 0, 0.9);
+              padding: 0.5rem 1rem;
+              cursor: pointer;
+              transition: all 0.7s ease;
+            }
+            .borderBtn:hover {
+              background-color: rgba(0, 0, 0, 0.25);
+            }
+          }
+        }
+      }
+    }
+  }
+}
