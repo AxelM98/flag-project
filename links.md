@@ -1,2 +1,2 @@
-- [Github repository](https://ditt-repo-här)
+- [Github repository](https://github.com/AxelM98/flag-project.git)
 - [Deployat projekt](https://ditt-projekt-här)

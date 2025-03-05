@@ -27,9 +27,11 @@ $white: #f2f2f2;
 
     .cardsWrapper {
       display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
       margin-top: 3rem;
       gap: 1.7rem;
-      flex-wrap: wrap;
     }
   }
 }

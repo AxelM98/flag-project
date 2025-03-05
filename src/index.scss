@@ -7,6 +7,126 @@ body {
   margin: 0;
   font-family: Roboto, Helvetica, Arial, sans-serif;
   overflow-x: hidden;
+  background-color:#202c36;
+  @media (max-width: 900px) {
+    .navbar {
+      overflow-x: hidden;
+      .navbarContainer {
+        width: 95%;
+        .logo {
+          display: none;
+        }
+      }
+    }
+
+    .mainConatainer {
+      .topWrapper {
+        flex-direction: column;
+        gap: 1rem;
+
+        .searchBar {
+          width: 100%;
+        }
+        .selectRegionBar {
+          width: 100%;
+        }
+      }
+    }
+    .nation {
+      width: 100vw;
+      .top {
+        .backBtn {
+          margin-left: 1rem;
+        }
+      }
+      .bottom {
+        flex-direction: column;
+        .imgContainer {
+          height: 70%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .imgWrapper {
+            height: 100%;
+            width: 90%;
+            border-radius: 0.5rem;
+            margin: 0;
+            img {
+              object-fit: cover;
+            }
+          }
+        }
+        .detailsContainer {
+          margin-top: 4.5rem;
+          padding-left: 2.5rem;
+          height: 68%;
+          width: 100vw;
+          display: flex;
+          flex-direction: column;
+          color: white;
+          background-color: #202c36;
+
+          h1 {
+            width: 100%;
+            height: 20%;
+            margin: 0;
+            font-size: 3.5rem;
+            font-weight: normal;
+          }
+          .details {
+            width: 100%;
+            height: 49%;
+            display: flex;
+            flex-direction: column;
+            .detailsRight {
+              height: 100%;
+              width: 100%;
+              :nth-child(4) {
+                margin-bottom: 0;
+              }
+              p {
+                margin: 0.7rem 0;
+              }
+            }
+            .detailsLeft {
+              height: 100%;
+              width: 100%;
+              p {
+                margin: 0.7rem 0;
+              }
+            }
+          }
+          .borderCountries {
+            margin-top: 3rem;
+            width: 100%;
+            height: 30%;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            .borderCountriesBtnsContainer {
+              width: fit-content;
+              height: fit-content;
+              display: flex;
+              gap: 0.5rem;
+              overflow-x: scroll;
+              .borderBtn {
+                text-decoration: none;
+                background-color: rgba(68, 78, 86);
+                border: none;
+                border-radius: 1rem;
+                color: white;
+                padding: 0.5rem 1rem;
+                cursor: pointer;
+                transition: all 0.7s ease;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 /* Light mode */
@@ -23,8 +143,6 @@ body {
   .navbar {
     background-color: white;
     color: black;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    z-index: 999;
 
     .darkModeBtnContainer button {
       color: black !important;
@@ -108,6 +226,7 @@ body {
     .bottom {
       .detailsContainer {
         color: black;
+        background-color: white;
 
         .borderCountries {
           .borderCountriesBtnsContainer {

@@ -5,17 +5,17 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import Home, { nationsLoader } from "./pages/Home/Home";
-import Nation, { nationDetailsLoader } from "./pages/Nation/Nation";
+import Home/* , { nationsLoader } */ from "./pages/Home/Home";
+import Nation/* , { nationDetailsLoader } */ from "./pages/Nation/Nation";
 import RootLayout from "./layouts/RootLayout/RootLayout";
 
 const routesFromElements = createRoutesFromElements(
   <Route path="/" element={<RootLayout />}>
-    <Route index element={<Home />} loader={nationsLoader} />
+    <Route index element={<Home />} /* loader={nationsLoader} */ />
     <Route
       path="/nation/:code"
       element={<Nation />}
-      loader={nationDetailsLoader}
+      /* loader={nationDetailsLoader} */
     />
   </Route>
 );

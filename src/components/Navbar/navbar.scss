@@ -29,6 +29,10 @@ $white: #f2f2f2;
   justify-content: center;
   background-color: $bg-color-darkmode;
   color: $white;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+
+
 
   .navbarContainer {
     width: 75%;

@@ -3,6 +3,16 @@ $dark-blue: #2b3844;
 $darker-blue: #202c36;
 $white: #f2f2f2;
 
+.loading {
+  color: gray;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
 .nation {
   background-color: $darker-blue;
   left: 0;
@@ -31,7 +41,7 @@ $white: #f2f2f2;
       cursor: pointer;
       transition: all 0.7s ease;
       font-size: medium;
-      .backIcon{
+      .backIcon {
         color: white;
       }
     }
