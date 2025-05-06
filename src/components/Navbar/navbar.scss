@@ -5,7 +5,6 @@ Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
 Weights: 300, 600, 800 
 */
 
-/* Color vars */
 $color-dark: rgb(43, 56, 68);
 $font-color: rgba(22, 22, 22, 1);
 $border-color: rgba(206, 206, 206, 1);
@@ -13,7 +12,6 @@ $border-color: rgba(206, 206, 206, 1);
 $bg-color-darkmode: rgba(62, 74, 85);
 $font-color-darkmode: rgb(255, 255, 255);
 
-/* Techover colors */
 $dark-blue: #2b3844;
 $darker-blue: #202c36;
 $white: #f2f2f2;
@@ -35,7 +33,7 @@ $white: #f2f2f2;
 
 
   .navbarContainer {
-    width: 75%;
+    width: 80%;
     height: 100%;
     display: flex;
     justify-content: space-between;

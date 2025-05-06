@@ -46,56 +46,63 @@ const Nation = () => {
             <div className="imgContainer">
               <div className="imgWrapper">
                 <img
-                  src={`${nationDetails[0].flags.png}`}
-                  alt={`${nationDetails[0].name.common} flag`}
+                  src={nationDetails[0]?.flags?.svg || ""}
+                  alt={`${nationDetails[0]?.name?.common || "Unknown"} flag`}
                 />
               </div>
             </div>
             <div className="detailsContainer">
-              <h1>{nationDetails[0].name.common}</h1>
+              <h1>{nationDetails[0]?.name?.common || "Unknown"}</h1>
               <div className="details">
                 <div className="detailsRight">
                   <p>
-                    {" "}
                     <strong>Population:</strong>{" "}
-                    {nationDetails[0].population.toLocaleString()}
+                    {nationDetails[0]?.population
+                      ? nationDetails[0].population.toLocaleString()
+                      : "Unknown"}
                   </p>
                   <p>
-                    <strong>Region:</strong> {nationDetails[0].region}
+                    <strong>Region:</strong>{" "}
+                    {nationDetails[0]?.region || "Unknown"}
                   </p>
                   <p>
                     <strong>Capital:</strong>{" "}
-                    {nationDetails[0].capital?.[0] || "No capital"}
+                    {nationDetails[0]?.capital?.[0] || "No capital"}
                   </p>
                   <p>
                     <strong>Native name:</strong>{" "}
-                    {Object.values(nationDetails[0].name.nativeName)
-                      .map((native) => native.common)
-                      .join(", ")}
+                    {nationDetails[0]?.name?.nativeName
+                      ? Object.values(nationDetails[0].name.nativeName)
+                          .map((native) => native?.common)
+                          .join(", ")
+                      : "No native name"}
                   </p>
                 </div>
                 <div className="detailsLeft">
                   <p>
-                    <strong>Top Level Domain:</strong> {nationDetails[0].tld}
+                    <strong>Top Level Domain:</strong>{" "}
+                    {nationDetails[0]?.tld?.[0] || "Unknown"}
                   </p>
                   <p>
                     <strong>Currencies:</strong>{" "}
-                    {Object.values(nationDetails[0].currencies)
-                      .map((currency) => currency.name)
-                      .join(", ")}
+                    {nationDetails[0]?.currencies
+                      ? Object.values(nationDetails[0].currencies)
+                          .map((currency) => currency?.name)
+                          .join(", ")
+                      : "No currencies"}
                   </p>
                   <p>
                     <strong>Language:</strong>{" "}
-                    {Object.values(nationDetails[0].languages)
-                      .map((language) => language)
-                      .join(", ")}
+                    {nationDetails[0]?.languages
+                      ? Object.values(nationDetails[0].languages).join(", ")
+                      : "No languages"}
                   </p>
                 </div>
               </div>
               <div className="borderCountries">
                 <h2>Border Countries:</h2>
                 <div className="borderCountriesBtnsContainer">
-                  {nationDetails[0].borders ? (
+                  {nationDetails[0]?.borders?.length ? (
                     nationDetails[0].borders.map((border) => (
                       <Link
                         to={`/nation/${border}`}
@@ -116,6 +123,7 @@ const Nation = () => {
       )}
     </>
   );
+  
 };
 
 /* export const nationDetailsLoader = async ({ params }) => {

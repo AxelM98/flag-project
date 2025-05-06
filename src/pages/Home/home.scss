@@ -4,17 +4,15 @@ $darker-blue: #202c36;
 $white: #f2f2f2;
 
 .mainConatainer {
-  background-color: $darker-blue;
-  left: 0;
-  top: 4.5rem;
-  width: 100vw;
-  min-height: 100vh;
-  position: absolute;
+  /*  background-color: $darker-blue; */
+  width: 80vw;
   display: flex;
   justify-content: center;
+  align-items: center;
+  transform: translateY(4.5rem);
 
   .wrapper {
-    width: 76%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     padding-top: 2rem;
@@ -29,7 +27,7 @@ $white: #f2f2f2;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       margin-top: 3rem;
       gap: 1.7rem;
     }
