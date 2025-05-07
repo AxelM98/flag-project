@@ -13,122 +13,126 @@ $white: #f2f2f2;
   font-size: 1.5rem;
 }
 
-.nation {
-  background-color: $darker-blue;
-  left: 0;
-  top: 4.5rem;
-  width: 100vw;
-  height: calc(100vh - 4.5rem);
-  position: absolute;
+.nationContainer {
   display: flex;
-  flex-direction: column;
-
-  .top {
-    width: 100%;
-    height: 15%;
+  justify-content: center;
+  width: 100vw;
+  .nation {
+    background-color: $darker-blue;
+    height: calc(100vh - 4.5rem);
+    width: 80%;
+    transform: translateY(4.5rem);
     display: flex;
-    align-items: center;
-    .backBtn {
-      text-decoration: none;
-      margin-left: 13rem;
+    flex-direction: column;
+
+    .top {
+      width: 100%;
+      height: 15%;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      color: white;
-      padding: 0.4rem;
-      padding-right: 0.7rem;
-      border-radius: 0.3rem;
-      cursor: pointer;
-      transition: all 0.7s ease;
-      font-size: medium;
-      .backIcon {
-        color: white;
-      }
-    }
-    .backBtn:hover {
-      background-color: rgb(92, 101, 109);
-    }
-  }
-  .bottom {
-    width: 100%;
-    height: 70%;
-    display: flex;
-    .imgContainer {
-      height: 100%;
-      width: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      .imgWrapper {
-        margin-left: 12rem;
-        height: 71%;
-        width: 73%;
-        display: flex;
-        border-radius: 1rem;
-        overflow: hidden;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-          border-radius: 1rem;
-        }
-      }
-    }
-    .detailsContainer {
-      margin-top: 4.5rem;
-      padding-left: 4rem;
-      height: 68%;
-      width: 50%;
-      display: flex;
-      flex-direction: column;
-      color: white;
-      h1 {
-        width: 100%;
-        height: 20%;
-        margin: 0;
-        font-size: 3.5rem;
-        font-weight: normal;
-      }
-      .details {
-        width: 100%;
-        height: 49%;
-        display: flex;
-        font-size: large;
-        .detailsRight {
-          height: 100%;
-          width: 35%;
-        }
-        .detailsLeft {
-          height: 100%;
-          width: 35%;
-        }
-      }
-      .borderCountries {
-        width: 100%;
-        height: 30%;
+      .backBtn {
+        text-decoration: none;
         display: flex;
         align-items: center;
-        gap: 5rem;
-        .borderCountriesBtnsContainer {
-          width: 20rem;
-          height: fit-content;
+        gap: 0.5rem;
+        color: white;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        transition: all 0.7s ease;
+        font-size: medium;
+        .backIcon {
+          color: white;
+        }
+      }
+      .backBtn:hover {
+        background-color: rgb(92, 101, 109);
+      }
+    }
+    @media (max-width: 900px) {
+      .top {
+        height: 8%;
+      }
+    }
+    .bottom {
+      width: 100%;
+      height: 70%;
+      display: flex;
+      justify-content: space-between;
+      .imgContainer {
+        height: 100%;
+        width: 47%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .imgWrapper {
+          height: 100%;
+          width: 100%;
           display: flex;
-          gap: 0.5rem;
-          overflow-x: scroll;
-          .borderBtn {
-            text-decoration: none;
-            background-color: rgba(68, 78, 86);
-            border: none;
+          border-radius: 1rem;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
             border-radius: 1rem;
-            color: white;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            transition: all 0.7s ease;
           }
-          .borderBtn:hover {
-            background-color: rgb(93, 106, 117);
+        }
+      }
+      @media (max-width: 900px) {
+        .imgContainer {
+          width: 100%;
+        }
+      }
+      .detailsContainer {
+        height: 100%;
+        width: 47%;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        justify-content: space-evenly;
+        h1 {
+          margin: 0;
+          font-size: 3.5rem;
+          font-weight: normal;
+        }
+        .details {
+          display: flex;
+          font-size: large;
+          justify-content: space-between;
+        }
+        .borderCountries {
+          width: 100%;
+          height: 30%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .borderCountriesBtnsContainer {
+            width: 20rem;
+            height: fit-content;
+            display: flex;
+            gap: 0.5rem;
+            overflow-x: scroll;
+            .borderBtn {
+              text-decoration: none;
+              background-color: rgba(68, 78, 86);
+              border: none;
+              border-radius: 1rem;
+              color: white;
+              padding: 0.5rem 1rem;
+              cursor: pointer;
+              transition: all 0.7s ease;
+            }
+            .borderBtn:hover {
+              background-color: rgb(93, 106, 117);
+            }
           }
+        }
+      }
+      @media (max-width: 900px) {
+        .detailsContainer {
+          width: 100%;
+          margin-top: 2rem;
         }
       }
     }

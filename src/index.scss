@@ -25,9 +25,7 @@ body {
 
   main {
     display: flex;
-
     @media (max-width: 900px) {
-
       .mainConatainer {
         .topWrapper {
           flex-direction: column;
@@ -42,35 +40,27 @@ body {
         }
       }
       .nation {
-        width: 100vw;
-        .top {
-          .backBtn {
-            margin-left: 1rem;
-          }
-        }
         .bottom {
           flex-direction: column;
           .imgContainer {
-            height: 70%;
-            width: 100%;
+            height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
 
             .imgWrapper {
               height: 100%;
-              width: 90%;
+              width: 100%;
               border-radius: 0.5rem;
               margin: 0;
               img {
-                object-fit: cover;
+                object-fit: contain;
               }
             }
           }
           .detailsContainer {
             margin-top: 4.5rem;
-            padding-left: 2.5rem;
-            height: 68%;
+            height: 60%;
             width: 100vw;
             display: flex;
             flex-direction: column;

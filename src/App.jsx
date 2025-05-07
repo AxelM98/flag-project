@@ -5,8 +5,8 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import Home/* , { nationsLoader } */ from "./pages/Home/Home";
-import Nation/* , { nationDetailsLoader } */ from "./pages/Nation/Nation";
+import Home /* , { nationsLoader } */ from "./pages/Home/Home";
+import Nation /* , { nationDetailsLoader } */ from "./pages/Nation/Nation";
 import RootLayout from "./layouts/RootLayout/RootLayout";
 
 const routesFromElements = createRoutesFromElements(

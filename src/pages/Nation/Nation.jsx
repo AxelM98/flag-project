@@ -31,7 +31,7 @@ const Nation = () => {
   //const nationDetails = useLoaderData();
   // console.log(nationDetails);
   return (
-    <>
+    <div className="nationContainer">
       {loading ? (
         <div className="loading">Loading...</div>
       ) : (
@@ -54,7 +54,7 @@ const Nation = () => {
             <div className="detailsContainer">
               <h1>{nationDetails[0]?.name?.common || "Unknown"}</h1>
               <div className="details">
-                <div className="detailsRight">
+                <div className="detailsLeft">
                   <p>
                     <strong>Population:</strong>{" "}
                     {nationDetails[0]?.population
@@ -78,7 +78,7 @@ const Nation = () => {
                       : "No native name"}
                   </p>
                 </div>
-                <div className="detailsLeft">
+                <div className="detailsRight">
                   <p>
                     <strong>Top Level Domain:</strong>{" "}
                     {nationDetails[0]?.tld?.[0] || "Unknown"}
@@ -121,9 +121,8 @@ const Nation = () => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
-  
 };
 
 /* export const nationDetailsLoader = async ({ params }) => {
